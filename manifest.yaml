@@ -1,0 +1,30 @@
+display_information:
+  name: co:here slack app
+features:
+  app_home:
+    home_tab_enabled: false
+    messages_tab_enabled: true
+    messages_tab_read_only_enabled: false
+  bot_user:
+    display_name: co
+    always_online: true
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - channels:join
+      - chat:write
+      - reactions:read
+      - app_mentions:read
+settings:
+  event_subscriptions:
+    bot_events:
+      - app_mention
+      - reaction_added
+      - message.channels
+  interactivity:
+    is_enabled: false
+  org_deploy_enabled: true
+  token_rotation_enabled: false
+  socket_mode_enabled: true
+  is_hosted: false
